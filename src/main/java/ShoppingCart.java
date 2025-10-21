@@ -8,13 +8,14 @@ public class ShoppingCart {
         // TODO: Print the final summary line with item count and total
         // TODO: Use Scanner for input
         Scanner sc = new Scanner(System.in);
-        System.out.println("How many items are you purchasing? ");
+        System.out.print("How many items are you purchasing? ");
         int num = sc.nextInt();
-        double price = 0;
-        for (int i=0; i<=num; i++){
-            System.out.println("Price of item " + i);
-            price += sc.nextDouble();
+        double total = 0.0;
+        for (int i=1; i<=num; i++){
+            System.out.print("Price of item " + i + "? ");
+            double price = sc.nextDouble();
+            total += price;
         }
-        System.out.println("Your cart has " + num + "items with a total cost of $" + price);
+        System.out.print("Your cart has " + num + " items with a total cost of $" + total);
     }
 }
